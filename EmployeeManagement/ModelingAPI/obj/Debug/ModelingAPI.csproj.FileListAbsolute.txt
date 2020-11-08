@@ -1,0 +1,11 @@
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\bin\Debug\ModelingAPI.dll
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\bin\Debug\ModelingAPI.pdb
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\bin\Debug\DomainModel.dll
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\bin\Debug\DomainModel.pdb
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\obj\Debug\ModelingAPI.csprojAssemblyReference.cache
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\obj\Debug\ModelingAPI.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\obj\Debug\ModelingAPI.csproj.CopyComplete
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\obj\Debug\ModelingAPI.dll
+C:\Users\Test\source\repos\EmployeeManagement\ModelingAPI\obj\Debug\ModelingAPI.pdb

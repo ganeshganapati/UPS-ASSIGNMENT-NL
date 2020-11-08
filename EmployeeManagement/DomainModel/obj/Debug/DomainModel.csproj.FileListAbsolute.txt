@@ -1,0 +1,9 @@
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\obj\Debug\DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\obj\Debug\DomainModel.pdb
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\obj\Debug\DomainModel.csprojAssemblyReference.cache
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Test\source\repos\EmployeeManagement\DomainModel\obj\Debug\DomainModel.csproj.CopyComplete

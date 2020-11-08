@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="EmployeeManagement.Views.RegisterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EmployeeManagement.Views"
+             xmlns:local1="clr-namespace:DomainModel.Models;assembly=DomainModel"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="GenderLists" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local1:gender"></x:Type>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="StatusLists" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local1:status"></x:Type>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+
+    <Border Margin="10" Padding="30"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Background="White"
+        BorderBrush="{StaticResource BrushPrimary2}"
+        BorderThickness="0"
+        CornerRadius="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="0" Color="White" />
+        </Border.Effect>
+        <Grid Grid.IsSharedSizeScope="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="301*"/>
+                <ColumnDefinition Width="62*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+
+            </Grid.RowDefinitions>
+
+            <!--<TextBlock Grid.Row="0"
+                HorizontalAlignment="Center"
+                FontSize="18"
+                Text="User Registration Form" Margin="90,0,28.6,-0.2" />-->
+
+            <Grid Margin="0,20,0.4,19.8" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <!--<Grid Grid.Row="0" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding id, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" IsReadOnlyCaretVisible="True" Visibility="Hidden" />
+                </Grid>-->
+
+                <Grid Grid.Row="1" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Enter Name" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding name,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"  
+  
+                        />
+
+
+                </Grid>
+
+
+                <Grid Grid.Row="2" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Enter Email" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding email,ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+
+                <Grid Grid.Row="3" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Gender" />
+                    <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding gender,ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" BorderBrush="#FFF3F3F6" BorderThickness="0" IsEnabled="False"/>
+                    <!--<Grid>-->
+                    <ComboBox HorizontalAlignment="right" VerticalAlignment="Center" 
+                    ItemsSource="{Binding Source={StaticResource GenderLists }}"
+                    SelectedItem="{Binding gender, Mode=TwoWay}" Grid.Column="1" Margin="0,0,218,-0.4" Width="64">
+                    </ComboBox>
+                    <!--</Grid>-->
+                </Grid>
+
+                <Grid Grid.Row="4" Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Status" />
+                   <TextBox Grid.Column="1" Margin="20,0,0,0"
+                        Text="{Binding status,ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" BorderBrush="#FFF3F3F6" BorderThickness="0" IsEnabled="False" />
+                    <ComboBox HorizontalAlignment="right" VerticalAlignment="Center" 
+                    ItemsSource="{Binding Source={StaticResource StatusLists }}"
+                    SelectedItem="{Binding status, Mode=TwoWay}" Grid.Column="1" Margin="0,0,218,-0.4" Width="64">
+                    </ComboBox>
+                </Grid>
+                <Grid Grid.Row="5" Margin="0,41.4,-0.2,20.6" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                        <!--<ColumnDefinition Width="300" />-->
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Center"
+            DataContext="{Binding ErrorMessageViewModel}" 
+            Foreground="DarkRed" Text="{Binding Message}"
+            Visibility="{Binding HasMessage, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBlock Grid.Row="2" Margin="0,10,0,0" HorizontalAlignment="Center"
+            DataContext="{Binding StatusMessageViewModel}"
+            Foreground="DarkGreen"
+            Text="{Binding Message}"
+            Visibility="{Binding HasMessage, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                </Grid>
+                <Button Grid.Row="5" Margin="0,5"
+                    HorizontalAlignment="Center"
+                    Command="{Binding RegisterUserCommand}"
+                    Content="Register" IsDefault="True" />
+                <TextBlock Grid.Row="7" Margin="208,10.2,207.6,15.4"
+                    HorizontalAlignment="Center"
+                   
+                    Foreground="DarkRed"
+                    Text="{Binding Message}"
+                     />
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

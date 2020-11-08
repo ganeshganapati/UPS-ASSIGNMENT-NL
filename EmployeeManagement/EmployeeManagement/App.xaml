@@ -1,0 +1,22 @@
+﻿<Application x:Class="EmployeeManagement.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:EmployeeManagement.ViewModels"
+             xmlns:views="clr-namespace:EmployeeManagement.Views"
+             xmlns:local="clr-namespace:EmployeeManagement"
+            >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+                <ResourceDictionary Source="/Styles/NavigationBar.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
+                <views:RegisterView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
